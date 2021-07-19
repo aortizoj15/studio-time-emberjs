@@ -1,0 +1,29 @@
+<article class="rental">
+    <Studio::Image
+    src={{@studio.image}}
+    alt="A picture of {{@studio.title}}"
+  />
+  <div class="details">
+    <h3>{{@studio.title}}</h3>
+    <div class="detail owner">
+      <span>Founder:</span> {{@studio.owner}}
+    </div>
+    <div class="detail type">
+      <span>Type:</span> {{@studio.type}}
+    </div>
+    <div class="detail location">
+      <span>Location:</span> {{@studio.city}}
+    </div>
+    <div class="detail bedrooms">
+      <span>Number of rooms:</span> {{@studio.bedrooms}}
+    </div>
+  </div>
+  <Map
+    @lat={{@studio.location.lat}}
+    @lng={{@studio.location.lng}}
+    @zoom="9"
+    @width="150"
+    @height="150"
+    alt="A map of {{@studio.title}}"
+  />
+</article>
